@@ -9,17 +9,17 @@ express()
 	.get('/', (req, res) => res.render('pages/index'))
 	.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
-app.get('/home', function(req, res) {
-	// Controller
-	console.log('Received a request for the home page');
-	let firstNum = submittedForm();
-	let secondNum = submittedForm();
-	let operator = submittedForm();
-	let params = { firstNum: firstNum, secondNum: secondNum, operator: operator };
+// app.get('/home', function(req, res) {
+// 	// Controller
+// 	console.log('Received a request for the home page');
+// 	let firstNum = submittedForm();
+// 	let secondNum = submittedForm();
+// 	let operator = submittedForm();
+// 	let params = { firstNum: firstNum, secondNum: secondNum, operator: operator };
 
-	res.render('home', params);
-});
+// 	res.render('home', params);
+// });
 
-function submittedForm() {
-	return;
-}
+// function submittedForm() {
+// 	return;
+// }
