@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+  <div class="card">
+    <div class="card-body">
+        <div class="card-header">
+            <h4 class="card-title">Form</h4>
+        </div>
+
+        <form action="/math" method="GET">
+            <br />
+            <hr />
+      
+            <label>Parameter 1</label>
+            <input type="number" name="p1">
+            
+            <select name="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+            
+            <label>Parameter 2</label>
+            <input type="number" name="p2">
+            <br />
+            <hr />
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br />
+            <hr />
+        </form>
+        <p><strong>Results:</strong><%= result %></p>
+        <div class="card-footer" name="footer" id="footer">
+            <p>DIV for Stretch Goals!</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

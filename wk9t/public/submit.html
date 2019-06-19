@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math Form</title>
+	<!-- <link rel="stylesheet" type="text/css" href="//stylesheet/main.css" /> -->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body class="container">
+	<h1>Math Form Page</h1>
+	<div class="card">
+		<div class="card-body">
+			<div class="card-header">
+				<h4 class="card-title">Form</h4>
+			</div>
+
+			<form action="/math" method="GET">
+				<br />
+				<hr />
+		  
+				<label>Parameter 1</label>
+				<input type="number" name="p1">
+				
+				<select name="operation">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="/">/</option>
+					<option value="*">*</option>
+				</select>
+				
+				<label>Parameter 2</label>
+				<input type="number" name="p2">
+				<br />
+				<hr />
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary" onclick="doMath(p1.value, operation.value, p2.value)">AJAX</button>
+				<br />
+				<hr />
+			</form>
+		  
+			<div class="card-footer" name="footer" id="footer">
+				<p>DIV for Stretch Goals!</p>
+			</div>
+		</div>
+    </div>
+    
+    <script language="javascript">
+        function doMath(p1, oper, p2) 
+        {
+
+			switch(oper) {
+                case '+':
+                    oper = "%2B";
+                    break;
+                case '/':
+                    oper = '%2F';
+                    break;
+            }
+            console.log(p1);
+            console.log(p2)
+            console.log(oper);
+            //math_service?p1=5&operation=%2B&p2=5
+            $.ajax({           
+			type : 'GET', 
+			//url: 'math_service?p1='+p1+"&operation=%2B&p2="+p2,                          
+            url: 'math_service?p1='+p1+"&p2="+p2+"&operation="+oper,          
+            // result =         
+            //data: data, 
+            //data : {'result': result},                      
+            dataType: 'json',                     
+            success: function(data)          
+            {
+                console.log(data);
+                data = JSON.stringify(data)     
+                $('#footer').html(data); //what i try to do but don't work
+            },
+            error: function(xhr, status, error) {
+                console.log(error);
+            }
+            });
+        }
+    </script>
+
+
+</body>
+</html>
