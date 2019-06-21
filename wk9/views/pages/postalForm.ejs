@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Postal Calculator</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+	</head>
+	<body class="container">
+		<h1>Postal Calculator</h1>
+		<div class="card">
+			<div class="card-body">
+				<div class="card-header">
+					<h4 class="card-title">Calculate rate</h4>
+				</div>
+                    <form action="/calculateRate" method="GET">
+					<br />
+					<hr />
+					<label for="mailType">1. Select type of mail:</label>
+					<select name="mailType" id="mailType">
+						<option value="stamped letter">Letter (Stamped)</option>
+						<option value="metered letter">Letters (Metered)</option>
+						<option value="large envelope">Large Envelopes (Flats)</option>
+						<option value="package"
+							>First-Class Package Service--Retail</option> 
+                    </select
+					><br /><br />
+					<!-- <label for="zone">2. If type is "package," choose zone:</label>
+					<select name="zone">
+						<option value="zone12">Zones 1 and 2</option>
+						<option value="zone3">Zone 3</option>
+						<option value="zone4">Zone 4</option>
+						<option value="zone5">Zone 5</option>
+						<option value="zone6">Zone 6</option>
+						<option value="zone7">Zone 7</option>
+						<option value="zone89">Zones 8 and 9</option> </select
+					><br /><br /> -->
+                    <label for="weight">2. Select weight in ounces up to: </label>
+					<select name="weight" id="weight">
+						<option value="1">1 ounce</option>
+						<option value="2">2 ounces</option>
+                        <option value="3">3 ounces</option>
+                        <option value="3.5">3.5 ounces</option>
+						<option value="4">4 ounces</option>
+						<option value="5">5 ounces</option>
+						<option value="6">6 ounces</option>
+						<option value="7">7 ounces</option>
+						<option value="8">8 ounces</option>
+						<option value="9">9 ounces</option>
+						<option value="10">10 ounces</option>
+						<option value="11">11 ounces</option>
+						<option value="12">12 ounces</option>
+						<option value="13">13 ounces</option>
+					</select>
+					<br />
+					<hr />
+					<button type="submit" class="btn btn-secondary" value="submitForRate">get price</button>
+					<br />
+					<hr />
+				</form>
+			</div>
+		</div>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	</body>
+</html>

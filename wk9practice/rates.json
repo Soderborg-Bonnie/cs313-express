@@ -1,0 +1,148 @@
+{
+    "type":[
+    {"stampedLetters":[
+        {"ounces": "1", "rate": ".55"},
+        {"ounces": "2", "rate": ".7"},
+        {"ounces": "3", "rate": ".85"},
+        {"ounces": "3.5", "rate": "1"}
+    ]},
+    
+    {"meteredLetters":[
+        {"ounces": "1", "rate": ".5"},
+        {"ounces": "2", "rate": ".65"},
+        {"ounces": "3", "rate": ".8"},
+        {"ounces": "3.5", "rate": ".95"}
+    ]},
+
+    {"largeEnvelopes":[
+        {"ounces": "1", "rate": "1"},
+        {"ounces": "2", "rate": "1.15"},
+        {"ounces": "3", "rate": "1.3"},
+        {"ounces": "4", "rate": "1.45"},
+        {"ounces": "5", "rate": "1.6"},
+        {"ounces": "6", "rate": "1.75"},
+        {"ounces": "7", "rate": "1.9"},
+        {"ounces": "8", "rate": "2.05"},
+        {"ounces": "9", "rate": "2.2"},
+        {"ounces": "10", "rate": "2.35"},
+        {"ounces": "11", "rate": "2.5"},
+        {"ounces": "12", "rate": "2.65"},
+        {"ounces": "13", "rate": "2.8"}
+    ]},
+    {"package":[
+        {"zone1": [
+            {"ounces": "1", "rate": "3.66"},
+            {"ounces": "2", "rate": "3.66"},
+            {"ounces": "3", "rate": "3.66"},
+            {"ounces": "4", "rate": "3.66"},
+            {"ounces": "5", "rate": "4.39"},
+            {"ounces": "6", "rate": "4.39"},
+            {"ounces": "7", "rate": "4.39"},
+            {"ounces": "8", "rate": "4.39"},
+            {"ounces": "9", "rate": "5.19"},
+            {"ounces": "10", "rate": "5.19"},
+            {"ounces": "11", "rate": "5.19"},
+            {"ounces": "12", "rate": "5.19"},
+            {"ounces": "13", "rate": "5.71"}
+            ]
+        },
+        {"zone3": [
+            {"ounces": "1", "rate": "3.70"},
+            {"ounces": "2", "rate": "3.70"},
+            {"ounces": "3", "rate": "3.70"},
+            {"ounces": "4", "rate": "3.70"},
+            {"ounces": "5", "rate": "4.44"},
+            {"ounces": "6", "rate": "4.44"},
+            {"ounces": "7", "rate": "4.44"},
+            {"ounces": "8", "rate": "4.44"},
+            {"ounces": "9", "rate": "5.24"},
+            {"ounces": "10", "rate": "5.24"},
+            {"ounces": "11", "rate": "5.24"},
+            {"ounces": "12", "rate": "5.24"},
+            {"ounces": "13", "rate": "5.78"}
+            ]
+        },
+        {"zone4": [
+            {"ounces": "1", "rate": "3.74"},
+            {"ounces": "2", "rate": "3.74"},
+            {"ounces": "3", "rate": "3.74"},
+            {"ounces": "4", "rate": "3.74"},
+            {"ounces": "5", "rate": "4.49"},
+            {"ounces": "6", "rate": "4.49"},
+            {"ounces": "7", "rate": "4.49"},
+            {"ounces": "8", "rate": "4.49"},
+            {"ounces": "9", "rate": "5.30"},
+            {"ounces": "10", "rate": "5.30"},
+            {"ounces": "11", "rate": "5.30"},
+            {"ounces": "12", "rate": "5.30"},
+            {"ounces": "13", "rate": "5.85"}
+            ]
+        },
+        {"zone5": [
+            {"ounces": "1", "rate": "3.78"},
+            {"ounces": "2", "rate": "3.78"},
+            {"ounces": "3", "rate": "3.78"},
+            {"ounces": "4", "rate": "3.78"},
+            {"ounces": "5", "rate": "4.53"},
+            {"ounces": "6", "rate": "4.53"},
+            {"ounces": "7", "rate": "4.53"},
+            {"ounces": "8", "rate": "4.53"},
+            {"ounces": "9", "rate": "5.35"},
+            {"ounces": "10", "rate": "5.35"},
+            {"ounces": "11", "rate": "5.35"},
+            {"ounces": "12", "rate": "5.35"},
+            {"ounces": "13", "rate": "5.93"}
+            ]
+        },
+        {"zone6": [
+            {"ounces": "1", "rate": "3.82"},
+            {"ounces": "2", "rate": "3.82"},
+            {"ounces": "3", "rate": "3.82"},
+            {"ounces": "4", "rate": "3.82"},
+            {"ounces": "5", "rate": "4.57"},
+            {"ounces": "6", "rate": "4.57"},
+            {"ounces": "7", "rate": "4.57"},
+            {"ounces": "8", "rate": "4.57"},
+            {"ounces": "9", "rate": "5.40"},
+            {"ounces": "10", "rate": "5.40"},
+            {"ounces": "11", "rate": "5.40"},
+            {"ounces": "12", "rate": "5.40"},
+            {"ounces": "13", "rate": "5.99"}
+            ]
+        },
+        {"zone7": [
+            {"ounces": "1", "rate": "3.94"},
+            {"ounces": "2", "rate": "3.94"},
+            {"ounces": "3", "rate": "3.94"},
+            {"ounces": "4", "rate": "3.94"},
+            {"ounces": "5", "rate": "4.69"},
+            {"ounces": "6", "rate": "4.69"},
+            {"ounces": "7", "rate": "4.69"},
+            {"ounces": "8", "rate": "4.69"},
+            {"ounces": "9", "rate": "5.53"},
+            {"ounces": "10", "rate": "5.53"},
+            {"ounces": "11", "rate": "5.53"},
+            {"ounces": "12", "rate": "5.53"},
+            {"ounces": "13", "rate": "6.13"}
+            ]
+        },
+        {"zone8": [
+            {"ounces": "1", "rate": "4.06"},
+            {"ounces": "2", "rate": "4.06"},
+            {"ounces": "3", "rate": "4.06"},
+            {"ounces": "4", "rate": "4.06"},
+            {"ounces": "5", "rate": "4.81"},
+            {"ounces": "6", "rate": "4.81"},
+            {"ounces": "7", "rate": "4.81"},
+            {"ounces": "8", "rate": "4.81"},
+            {"ounces": "9", "rate": "5.66"},
+            {"ounces": "10", "rate": "5.66"},
+            {"ounces": "11", "rate": "5.66"},
+            {"ounces": "12", "rate": "5.66"},
+            {"ounces": "13", "rate": "6.27"}
+            ]
+        }
+        ]
+    }
+    ]
+  }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Postal Calculator</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+    </head>
+    <body id="results">
+        <h1 id="returnAddress">sender of mail</h1>
+        <img src="Montana_Bicentennial_13c_1976_issue.jpg" alt="Montana stamp" id="stamp">
+        <!-- Bureau of Engraving and Printing. Designed by Walt Reed. [Public domain]
+        found here: https://commons.wikimedia.org/wiki/File:Montana_Bicentennial_13c_1976_issue.jpg 
+        used with permission -->
+        <div id='address'>
+            <h1>Here's the scoop:</h1><br><br>
+            <h2>Price for mailing a <strong><%= mailType %></strong></h2>
+            <h2>  weighing up to <strong><%= weight %></strong>  ounce(s):</h2><h2><strong><%= price %></strong></h2>
+        </div>
+    </body>
+</html>

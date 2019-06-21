@@ -1,0 +1,24 @@
+body {
+    padding: 2em;
+	background-color: rgb(125, 199, 204);
+}
+#results {
+    text-align: center;
+    padding: 2em;
+}
+#stamp {
+    width: 25em;
+    height: auto;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+#returnAddress {
+    position: absolute;
+    left: 1em;  
+}
+#address {
+    padding-top: 20%;
+    padding-left: 30%;
+    text-align: left;
+}

@@ -1,1 +1,1 @@
-web: node wk9t/index.js
+web: node wk9/index.js
