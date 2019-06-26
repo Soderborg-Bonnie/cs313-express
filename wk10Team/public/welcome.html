@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>wk10 team activity</title>
+		<link
+			rel="stylesheet"
+			href="https://bootswatch.com/4/journal/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="/stylesheets/
+    style.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">Static Page</div>
+		<div class="row mt-5">
+			<div class="col-md-6 m-auto">
+				<div class="card card-body text-center">
+					<h1><i class="fas fa-users"></i></h1>
+					<h1>Whom do you want to find?</h1>
+					<br /><br />
+					<form action="/getPerson" method="GET">
+						<label for="id">Id : </label>
+						<input name="id2" type="integer" /><br />
+						<hr />
+						<button
+							type="button"
+							class="btn btn-primary btn-block"
+							value="searchForPerson"
+							onclick="live(id2.value)"
+						>
+							Get Details
+						</button>
+						<hr />
+						<button
+							type="button"
+							class="btn btn-primary btn-block"
+							value="searchForParents"
+							onclick="getParents(id2.value)"
+						>
+							Parents
+						</button>
+						<button
+							type="button"
+							class="btn btn-primary btn-block"
+							value="searchForKids"
+							onclick="getChildren(id2.value)"
+						>
+							Kids
+						</button>
+					</form>
+					<div id="results">This should be replaced</div>
+				</div>
+			</div>
+		</div>
+
+		<script language="javascript">
+			function live(p1) {
+				console.log(p1);
+
+				/* Clear result div*/
+				$('#results').html('');
+
+				/* Get from elements values */
+				var postForm = {
+					//Fetch form data
+					id: p1 //Store name fields value
+				};
+				$.ajax({
+					type: 'GET',
+					data: postForm,
+					url: '/getPerson',
+					dataType: 'json',
+					success: function(data) {
+						console.log(data);
+						data = JSON.stringify(data);
+						$('#results').html('<strong>Result:</strong> ' + data); //what i try to do but don't work
+					},
+					error: function(xhr, status, error) {
+						console.log(error);
+					}
+				});
+			}
+			function getParents(p1) {
+				console.log(p1);
+
+				/* Clear result div*/
+				$('#results').html('');
+
+				/* Get from elements values */
+				var postForm = {
+					//Fetch form data
+					id: p1 //Store name fields value
+				};
+				$.ajax({
+					type: 'GET',
+					data: postForm,
+					url: '/getParents',
+					dataType: 'json',
+					success: function(data) {
+						console.log(data);
+						data = JSON.stringify(data);
+						$('#results').html('<strong>Result:</strong> ' + data); //what i try to do but don't work
+					},
+					error: function(xhr, status, error) {
+						console.log(error);
+					}
+				});
+			}
+			function getChildren(p1) {
+				console.log('Page Requested ID of '+p1);
+
+				/* Clear result div*/
+				$('#results').html('');
+
+				/* Get from elements values */
+				var postForm = {
+					//Fetch form data
+					id: p1 //Store name fields value
+				};
+				$.ajax({
+					type: 'GET',
+					data: postForm,
+					url: '/getChildren',
+					dataType: 'json',
+					success: function(data) {
+						console.log(data);
+						//data = JSON.stringify(data);
+						//$('#results').html("<strong>result:</strong> " + data); //what i try to do but don't work
+
+
+
+						data = JSON.stringify(data);
+
+                        // var jsondata= JSON.parse(data);
+                        // for(var x=0;x<jsonData.length;x++){
+                        //     content += jsondata[x].fname;
+                        //     content += "<br>";
+                        //     content += jsondata[x].lname;
+                        //     content += "<br>";
+                        //     content += jsondata[x].dob;
+                        //     content += "<br>";
+                        // }
+                        
+                        $("#results").append(data); 
+					},
+					error: function(xhr, status, error) {
+						console.log(error);
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "wk10team",
+  "version": "1.0.0",
+  "description": "db handling",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "team",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "~2.6.9",
+    "ejs": "^2.6.2",
+    "exp": "^57.2.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.16.2",
+    "http-errors": "~1.6.3",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "keywords": []
+}
